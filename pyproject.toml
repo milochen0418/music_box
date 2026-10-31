@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "music_box"
+version = "0.1.0"
+description = "Music Box (音樂盒): everything in the shared audio collection, in one place to listen to, whoever made it; and the song picker other apps open as a dialog. For *.reflex-ddns.com."
+authors = ["Milo Chen"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "music_box"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.15"
+reflex = "0.10.0"
+reflex-ddns-auth = {path = "../reflex_ddns_auth", develop = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+playwright = "^1.42.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

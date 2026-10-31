@@ -1,0 +1,48 @@
+"""The box's words, in Traditional Chinese and English."""
+
+from __future__ import annotations
+
+TEXT: dict[str, dict[str, str]] = {
+    "zh": {
+        "app": "音樂盒",
+        "tagline": "AI 作的、改編的、你收藏的，全部在這裡聽",
+        "lang_other": "English",
+        "search": "找歌名、風格或心情…",
+        "group_all": "全部",
+        "group_composed": "AI 作曲",
+        "group_remake": "改編",
+        "group_youtube": "YouTube",
+        "group_other": "其他",
+        "empty": "音樂庫還是空的。到音樂工坊請 AI 作一首吧。",
+        "none_found": "沒有符合的歌。",
+        "make": "到音樂工坊作新歌",
+        "repeat": "單曲循環",
+        "choose": "選這首",
+        "chosen": "已選",
+        "use": "就用這些",
+        "free": "可自由使用",
+        "personal": "僅限自用",
+        "loops": "可無縫循環",
+    },
+    "en": {
+        "app": "Music Box",
+        "tagline": "What the AI wrote, what you changed, what you collected: all of it, in one place",
+        "lang_other": "中文",
+        "search": "Search titles, styles or moods…",
+        "group_all": "All",
+        "group_composed": "Composed",
+        "group_remake": "Changed",
+        "group_youtube": "YouTube",
+        "group_other": "Other",
+        "empty": "The library is empty. Ask Music Studio for a piece.",
+        "none_found": "Nothing matches.",
+        "make": "Make a new one in Music Studio",
+        "repeat": "Repeat this song",
+        "choose": "Choose",
+        "chosen": "Chosen",
+        "use": "Use these",
+        "free": "Free to use",
+        "personal": "For your own use",
+        "loops": "Loops seamlessly",
+    },
+}
