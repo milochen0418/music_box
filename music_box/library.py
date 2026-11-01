@@ -49,8 +49,10 @@ class Track:
 
 def group_of(owner: str, meta: dict) -> str:
     origin = str(meta.get("origin") or "")
-    if origin in ("composed", "remake"):
-        return origin
+    if origin in ("composed", "sung"):
+        return "composed"
+    if origin in ("remake", "cover"):
+        return "remake"
     return "youtube" if meta.get("youtube_id") or owner == "youtube-to-mp3" else "other"
 
 
