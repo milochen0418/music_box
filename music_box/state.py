@@ -88,6 +88,7 @@ class Box(rx.State):
         self.chosen = []
         self.playing = ""
         self.on_load()
+        yield rx.set_value("search", self.query)
 
     @rx.event
     def switch_lang(self):

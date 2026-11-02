@@ -40,7 +40,8 @@ def _header() -> rx.Component:
 
 def _filters() -> rx.Component:
     return rx.el.div(
-        rx.el.input(value=Box.query, on_change=Box.set_query.debounce(200), placeholder=T["search"], data_testid="search", class_name="min-w-0 flex-1 rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"),
+        # The box keeps its own text: a value written back per key cuts Chinese input off.
+        rx.el.input(id="search", default_value=Box.query, on_change=Box.set_query.debounce(200), placeholder=T["search"], data_testid="search", class_name="min-w-0 flex-1 rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-400 focus:outline-none"),
         rx.el.div(
             rx.foreach(
                 Box.groups,
